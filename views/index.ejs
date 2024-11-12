@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title> <!-- Dynamic Title -->
-    <link rel="stylesheet" href="/public/stylesheets/style.css"> <!-- Link to CSS -->
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
 </head>
 <body>
     <header>
-        <h1>Car Incident Tracker</h1>
+        <h1>Welcome to Car Incident Tracker</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/projects">Projects</a>
-            <a href="/contact">Contact</a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Reported Incidents</a></li>
+                <li><a href="/contact">Contact
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <!-- Dynamic content will go here -->
-    
+        <h2>Track and manage car incidents with ease!</h2>
+        <p>This application helps you report, view, and update incidents efficiently.</p>
+        <a href="/projects" class="button">View Reported Incidents</a>
+        <a href="/projects/new" class="button">Report a New Incident</a>
     </main>
     <footer>
         <p>&copy; 2024 Car Incident Tracker</p>

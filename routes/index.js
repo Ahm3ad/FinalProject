@@ -22,7 +22,15 @@ router.get('/contact', (req, res) => {
 });
 
 router.get('/incidents', (req, res) => {
-    res.render('incident_form', { incidents: [] } )});
+    res.render('index', { incidents: [] } )});
+
+router.get('/incidents/new',(req,res ) => {
+    res.render('index', { incidents: [
+        { id: 1, title: 'Car Accident', description: 'A driver was involved in a car accident.', priority: 'High', status: 'Open', assignedTo: 'John Doe' },
+        { id: 2, title: 'Fire in Building', description: 'A fire occurred in a building.', priority: 'Medium', status: 'Closed', assignedTo: 'Jane Smith' },
+        { id: 3, title: 'Water Damage', description: 'A water leak occurred in a building.', priority: 'Low', status: 'Open', assignedTo: 'Michael Johnson' },
+    ] } )});
+
 
 
 
