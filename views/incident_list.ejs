@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Incident List</title>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+</head>
+<body>
+    <h1>Car Incident Tracker</h1>
+    <a href="/incidents/new">Report New Incident</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Assigned To</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% incidents.forEach(incident => { %>
+            <tr>
+                <td><%= incident.id %></td>
+                <td><%= incident.title %></td>
+                <td><%= incident.priority %></td>
+                <td><%= incident.status %></td>
+                <td><%= incident.assignedTo %></td>
+                <td>
+                    <form action="/incidents/update/<%= incident.id %>" method="post" style="display:inline;">
+                        <button type="submit">Update</button>
+                    </form>
+                    <form action="/incidents/delete/<%= incident.id %>" method="post" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
